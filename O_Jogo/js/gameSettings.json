@@ -1,0 +1,258 @@
+{
+    "gridSettings" : {
+        "height" : 18,
+        "width" : 32,
+        "lastBiomeChance" : 0.6, 
+        "fowVisibility" : 3,
+        "biomeSpreadMin" : 1,
+        "biomeSpreadMax" : 2
+    },
+    "playerSettings" : {
+        "maxHealth" : 100,
+        "maxEnergy" : 10000,
+        "maxFood" : 100,
+        "maxWater" : 100  
+    },
+    "tiles": {
+        "spawning" : {
+            "grass": 0.96,
+            "water": 0.01,
+            "snow": 0.018,
+            "sand": 0.012,
+            "ice" : 0
+        },
+        "movementCost" : {
+            "grass" : 20,
+            "water" : 50,
+            "snow" : 30,
+            "sand" : 30,
+            "ice" : 20
+        }
+    },
+    "tilesVariants" : {
+        "spawning" : {
+            "grass" : {
+                "default" : 0.63,
+                "stone" : 0.05,
+                "forest" : 0.1,
+                "bush" : 0.2,
+                "mushroom": 0.02
+            },
+            "water" : {
+                "default" : 0.8, 
+                "fish" : 0.2
+            },
+            "snow" : {
+                "default" : 0.7,
+                "forest" : 0.2,
+                "bush" : 0.1
+            },
+            "sand" : {
+                "default" : 0.7,
+                "cactus" : 0.3
+            },
+            "ice" : {
+                "default" : 1
+            }
+        },
+        "collectionCost" : {
+            "stone" : {
+                "default" : 25,
+                "stonePickaxe": 25, 
+                "ironPickaxe": 15
+            },
+            "forest" : {
+                "default" : 25,
+                "stoneAxe": 25, 
+                "ironAxe": 15
+            },
+            "bush" : {
+                "default" : 25,
+                "stoneHoe": 25, 
+                "ironHoe": 15
+            },
+            "mushroom": {
+                "default" : 25
+            },
+            "fish" : {
+                "default" : 0,
+                "fishingRod" : 25
+            }
+        },
+        "amount" : {
+            "default" : 0,
+            "stone" : 3,
+            "forest" : 5,
+            "bush" : 2,
+            "mushroom": 1,
+            "fish": 2
+        },
+        "drops" : {
+            "rate" : {
+                "stone" : {
+                    "stone" : 1,
+                    "ironChunk" : 0.15
+                },
+                "forest" : {
+                    "wood" : 1,
+                    "leaf" : 0.7,
+                    "fruit" : 0.25
+                },
+                "bush" : {
+                    "wood" : 0.1,
+                    "leaf" : 0.8,
+                    "fruit" : 1
+                },
+                "mushroom" : {
+                    "mushroom" : 1
+                },
+                "fish" : {
+                    "rawFish" : 1
+                }
+            },
+            "amount" : {
+                "stone" : {
+                    "default" : 1,
+                    "stonePickaxe" : 2
+                },
+                "wood" : {
+                    "default" : 1,
+                    "stoneAxe" : 2
+                },
+                "leaf" : {
+                    "default" : 1,
+                    "stoneHoe" : 2
+                },
+                "fruit" : {
+                    "default": 1
+                },
+                "mushroom" : {
+                    "default": 1
+                },
+                "ironChunk" : {
+                    "default" : 0,
+                    "stonePickaxe" : 1
+                },
+                "rawFish" : {
+                    "default" : 0,
+                    "fishingRod" : 1 
+                }
+            }
+        },
+        "tools" : {
+            "stoneAxe" : ["forest"],
+            "stoneHoe" : ["bush"],
+            "stonePickaxe" : ["stone"],
+            "fishingRod" : ["fish"]
+        },
+        "toolOnly" : ["fish"]
+    },
+    "items" : {
+        "recipes" : {
+            "hammer" : {
+                "energyCost" : 20,
+                "items" : {
+                    "wood" : 1,
+                    "stone" : 3
+                }
+            },
+            "stonePickaxe" : {
+                "energyCost" : 20,
+                "items" : {
+                    "wood" : 1,
+                    "stone" : 2
+                }
+            },
+            "stoneAxe" : {
+                "energyCost" : 20,
+                "items" : {
+                    "wood" : 1,
+                    "stone" : 2
+                }
+            },
+            "stoneHoe" : {
+                "energyCost" : 20,
+                "items" : {
+                    "wood" : 1,
+                    "stone" : 2
+                }
+            },
+            "stoneSword" : {
+                "energyCost" : 20,
+                "items" : {
+                    "wood" : 1,
+                    "stone" : 3
+                }
+            },
+            "rope" : {
+                "energyCost" : 10,
+                "items" : {
+                    "leaf" : 3
+                }
+            },
+            "boat" : {
+                "energyCost" : 10,
+                "items" : {
+                    "wood" : 5
+                }
+            },
+            "soup" : {
+                "energyCost" : 10,
+                "items" : {
+                    "mushroom" : 2,
+                    "wood" : 1
+                }
+            },
+            "fishingRod" : {
+                "energyCost" : 20,
+                "items" : {
+                    "wood" : 2,
+                    "rope" : 2,
+                    "ironBar" : 1
+                }
+            }
+        },
+        "info" : {
+
+        },
+        "craftableOnce" : ["stonePickaxe", "ironPickaxe", "stoneAxe", "ironAxe", "stoneHoe", "fishingRod"]
+    },
+    "buildings" : {
+        "campfire" : {
+            "energyCost" : 10,
+            "items": {
+                "wood" : 6,
+                "stone": 3
+            },
+            "tool" : "default",
+            "tiles" : ["snow", "sand", "grass"]
+        },
+        "furnace" : {
+            "energyCost" : 30,
+            "items": {
+                "wood" : 5,
+                "stone": 15
+            },
+            "tool" : "hammer",
+            "tiles" : ["snow", "sand", "grass"]
+        },
+        "tower" : {
+            "energyCost" : 60,
+            "items": {
+                "wood" : 30,
+                "stone": 45
+            },
+            "tool" : "hammer",
+            "tiles" : ["snow", "grass"]
+        },
+        "fishingNet" : {
+            "energyCost" : 20,
+            "items": {
+                "wood" : 25,
+                "rope": 15
+            },
+            "tool" : "hammer",
+            "tiles" : ["water"]
+        }
+    }
+}
